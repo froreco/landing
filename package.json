@@ -1,0 +1,30 @@
+{
+  "name": "landing-canvas-11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.37.0"
+  },
+  "scripts": {
+    "build": "npm run build-gulp && eleventy",
+    "clean": "rm -rf _site",
+    "dev": "eleventy --serve --port 8000",
+    "watch": "gulp watch",
+    "build-gulp": "gulp imageminify && gulp minify && gulp htmlminify && gulp builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

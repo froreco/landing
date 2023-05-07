@@ -1,0 +1,19 @@
+{
+    "company": {
+        "name": "frore.",
+        "name_plain": "frore",
+        "name_short": "fr.",
+        "tagline": "Simplifying Travel Management",
+        "brief": "We thrive to make travel management simple and more efficient.",
+        "address": "",
+        "email": "hey@frore.co",
+        "phone": ""
+    },
+    "social": {
+        "facebook": "",
+        "twitter": "https://twitter.com/froreco/",
+        "instagram": "https://instagram.com/froreco_official",
+        "linkedin": "https://www.linkedin.com/company/froreco/",
+        "pinterest": ""
+    }
+}

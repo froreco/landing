@@ -1,0 +1,153 @@
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="bg-dark dark border-0">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row justify-content-center text-center col-mb-50">
+						<div class="col-lg-6 col-md-10">
+							<h2>Follow us to know how <strong style="font-family: 'Inter', sans-serif;letter-spacing: 2px;">frore<span class="color">.</span></strong> can <span>super-charge</span> your business.</h2>
+
+							<div class="d-flex justify-content-center">
+                                {% if settings.social.facebook %}
+                                    <a href="{{ settings.social.facebook | safe }}" target="_blank" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-facebook border-0">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                {% endif %}
+
+                                {% if settings.social.twitter %}
+                                    <a href="{{ settings.social.twitter | safe }}" target="_blank" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-twitter border-0">
+                                        <i class="bi-twitter"></i>
+                                        <i class="bi-twitter"></i>
+                                    </a>
+                                {% endif %}
+
+                                {% if settings.social.pinterest %}
+                                    <a href="{{ settings.social.pinterest | safe }}" target="_blank" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-pinterest border-0">
+                                        <i class="fa-brands fa-pinterest-p"></i>
+                                        <i class="fa-brands fa-pinterest-p"></i>
+                                    </a>
+                                {% endif %}
+
+                                {% if settings.social.instagram %}
+                                    <a href="{{ settings.social.instagram | safe }}" target="_blank" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-instagram border-0">
+                                        <i class="bi-instagram"></i>
+                                        <i class="bi-instagram"></i>
+                                    </a>
+                                {% endif %}
+
+                                {% if settings.social.linkedin %}
+                                    <a href="{{ settings.social.linkedin | safe }}" target="_blank" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-linkedin border-0">
+                                        <i class="bi-linkedin"></i>
+                                        <i class="bi-linkedin"></i>
+                                    </a>
+                                {% endif %}
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="clear line border-color op-03 border-width-2"></div>
+
+					<div class="row col-mb-50">
+
+						<div class="col-lg-5 col-12">
+
+							<div class="widget widget_links">
+
+								<h3 class="text-transform-none ls-5 fw-bolder display-2 text-lg-start text-center mb-2" style="font-family: 'Inter', sans-serif;letter-spacing: 2px;">
+									frore<span class="color">.</span>
+								</h3>
+
+								<p class="lead text-lg-start text-center">{{ settings.company.brief | safe }}</p>
+								<div class="row">
+                                    {% if settings.company.phone %}
+                                        <div class="col-6 col-lg-12 text-center text-lg-start">
+                                            <div class="feature-box fbox-plain fbox-sm align-items-center">
+                                                <div class="fbox-icon d-none d-lg-block">
+                                                    <i class="bi-telephone text-light"></i>
+                                                </div>
+                                                <div class="fbox-content">
+                                                    <span class="text-muted">Call Us:</span><br>
+                                                    <h3 class="text-transform-none ls-0 fw-semibold">{{ settings.company.phone | safe }}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    {% if settings.company.email %}
+                                        <div class="col-6 col-lg-12 mt-lg-2 text-center text-lg-start">
+                                            <div class="feature-box fbox-plain fbox-sm align-items-center">
+                                                <div class="fbox-icon d-none d-lg-block">
+                                                    <i class="bi-envelope text-light"></i>
+                                                </div>
+                                                <div class="fbox-content">
+                                                    <span class="text-muted">Email Us:</span><br>
+                                                    <h3 class="text-transform-none ls-0 fw-semibold">{{ settings.company.email | safe }}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-1 d-none d-lg-block"></div>
+
+						<div class="col-lg-3 col-6">
+
+							<div class="widget widget_links">
+
+								<h4 class="text-transform-none ls-0 fw-medium fs-5 font-body">How we do</h4>
+
+								<ul>
+									<li><a href="/#our-stack" data-scrollto="#our-stack">Our Stack</a></li>
+									<li><a href="/#journey-planner" data-scrollto="#journey-planner">Journey Planner</a></li>
+									<li><a href="/#checkin-system" data-scrollto="#checkin-system">Check-in System</a></li>
+									<li><a href="/#more-features" data-scrollto="#more-features">More Features</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-3 col-6">
+
+							<div class="widget widget_links">
+
+								<h4 class="text-transform-none ls-0 fw-medium fs-5 font-body">About Us</h4>
+
+								<ul>
+									<li><a href="https://blog.frore.co/posts/cloud-based-solutions-for-aviation-and-maritime" target="_blank">Offerings</a></li>
+									<li><a href="https://blog.frore.co/" target="_blank">frore. Blog</a></li>
+									<li><a href="/contact">Get a Quote</a></li>
+									<li><a href="https://frore.atlassian.net/servicedesk/customer/portals" target="_blank">Support</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="row justify-content-center mt-5">
+						<div class="col-auto">
+							<div class="card border-color op-04">
+								<div class="card-body py-3 px-4">
+									<small class="">&copy; 2023 All Rights Reserved by <strong style="font-family: 'Inter', sans-serif;letter-spacing: 2px;">{{ settings.company.name_plain }}<span class="color">.</span></strong></small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+		</footer><!-- #footer end -->
