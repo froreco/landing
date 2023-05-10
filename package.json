@@ -24,6 +24,7 @@
     "clean": "rm -rf _site",
     "dev": "eleventy --serve --port 8000",
     "watch": "gulp watch",
+    "minifyjs": "gulp jsminify",
     "build-gulp": "gulp imageminify && gulp minify && gulp htmlminify && gulp builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
