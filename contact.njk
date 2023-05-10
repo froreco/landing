@@ -1,0 +1,247 @@
+---
+layout: base
+head: "
+    <style>
+        
+		.block-contact-1 .form-control {
+			padding: 12px 2px;
+			background-color: transparent !important;
+			border-top-width: 0;
+			border-right-width: 0;
+			border-left-width: 0;
+			border-bottom-width: 2px;
+			border-radius: 0;
+			font-weight: 500;
+			font-size: 18px;
+		}
+
+		.block-contact-1 .form-control::-moz-placeholder {
+			color: #CCC;
+			font-weight: 400;
+			font-size: 15px;
+		}
+		.block-contact-1 .form-control:-ms-input-placeholder {
+			color: #CCC;
+			font-weight: 400;
+			font-size: 15px;
+		}
+		.block-contact-1 .form-control::-webkit-input-placeholder {
+			color: #CCC;
+			font-weight: 400;
+			font-size: 15px;
+		}
+
+		.block-contact-1 textarea.form-control {
+			resize: none;
+			overflow: hidden;
+			word-wrap: break-word;
+		}
+
+		.block-contact-1 label:not(.custom-control-label) {
+			text-transform: none;
+			letter-spacing: 0;
+			font-weight: 500;
+			color: #777;
+			margin-bottom: 3px;
+			font-size: 14px;
+		}
+
+		.block-contact-1 .custom-control-label::before,
+		.block-contact-1 .custom-control-label::after { top: 0.0875rem; }
+
+		.block-contact-1 .form-control:active,
+		.block-contact-1 .form-control:focus {
+			border-color: #3D1144;
+		}
+
+		.custom-control-input:checked ~ .custom-control-label::before {
+			border-color: #3D1144;
+			background-color: #3D1144;
+		}
+
+		.custom-control-input:focus ~ .custom-control-label::before {
+			box-shadow: 0 0 0 0.2rem #3D114415;
+		}
+
+		.block-contact-1 .social-icon {
+			background-color: rgba(0,0,0,0.2);
+			font-size: 16px;
+		}
+    </style>
+"
+---
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="row align-items-stretch justify-content-between block-contact-1 g-0">
+
+					<div class="col-md-5">
+						<div class="dark h-100 min-vh-md-100 d-flex flex-column justify-content-between p-5" style="background-image: radial-gradient(circle at 100% 0%, #CC135C 0%, #CC135C 10%, transparent 10%,  transparent 100%), radial-gradient(circle at 90% 103%, transparent 30%, #3D1144 30%, #3D1144 100%),linear-gradient(90deg, #FF736E,#FF736E);">
+							<div>
+								<h1 class="fw-bold mb-1">Contact Us</h1>
+								<p class=" text-white-50 mb-5 mb-md-0">Get in Touch with Us. Our Team will reply your query within 24hrs.</p>
+							</div>
+
+							<div>
+								{% if settings.company.address_formatted %}
+									<div class="feature-box fbox-sm mb-4">
+										<div class="fbox-icon">
+											<i class="bi-geo-alt bg-transparent text-white p-0"></i>
+										</div>
+										<div class="fbox-content">
+											<h4 class="text-transform-none font-body fw-normal mb-2">
+												<a href="{{ settings.company.address_map_link | safe }}" data-lightbox="iframe" class="text-white">
+													{{ settings.company.address_formatted | safe }}
+												</a>
+											</h4>
+										</div>
+									</div>
+								{% endif %}
+								{% if settings.company.phone %}
+									<div class="feature-box fbox-sm mb-4">
+										<div class="fbox-icon">
+											<i class="bi-telephone-outbound bg-transparent text-white p-0"></i>
+										</div>
+										<div class="fbox-content">
+											<h4 class="text-transform-none font-body fw-normal mb-2">
+												<a class="text-white" href="tel:{{ settings.company.phone | safe }}">{{ settings.company.phone | safe }}</a>
+											</h4>
+										</div>
+									</div>
+								{% endif %}
+								{% if settings.company.email %}
+									<div class="feature-box fbox-sm mb-5 mb-md-0">
+										<div class="fbox-icon">
+											<i class="bi-envelope bg-transparent text-white p-0"></i>
+										</div>
+										<div class="fbox-content">
+											<h4 class="text-transform-none font-body fw-normal mb-2">
+												<a class="text-white" href="mailto:{{ settings.company.email | safe}}">{{ settings.company.email | safe}}</a>
+											</h4>
+										</div>
+									</div>
+								{% endif %}
+							</div>
+
+							<div>
+                                {% if settings.social.facebook %}
+									<a href="{{ settings.social.facebook | safe }}" target="_blank" class="social-icon rounded-circle border-0 rounded-circle h-bg-facebook">
+										<i class="fa-brands fa-facebook-f"></i>
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+								{% endif %}
+								{% if settings.social.twitter %}
+									<a href="{{ settings.social.twitter | safe }}" target="_blank" class="social-icon rounded-circle border-0 rounded-circle h-bg-twitter">
+										<i class="fa-brands fa-twitter"></i>
+										<i class="fa-brands fa-twitter"></i>
+									</a>
+								{% endif %}
+								{% if settings.social.pinterest %}
+									<a href="{{ settings.social.pinterest | safe }}" target="_blank" class="social-icon rounded-circle border-0 rounded-circle h-bg-pinterest">
+										<i class="fa-brands fa-pinterest-p"></i>
+										<i class="fa-brands fa-pinterest-p"></i>
+									</a>
+								{% endif %}
+								{% if settings.social.instagram %}
+									<a href="{{ settings.social.instagram | safe }}" target="_blank" class="social-icon rounded-circle border-0 rounded-circle h-bg-instagram">
+										<i class="fa-brands fa-instagram"></i>
+										<i class="fa-brands fa-instagram"></i>
+									</a>
+								{% endif %}
+								{% if settings.social.linkedin %}
+									<a href="{{ settings.social.linkedin | safe }}" target="_blank" class="social-icon rounded-circle border-0 rounded-circle h-bg-linkedin">
+										<i class="fa-brands fa-linkedin"></i>
+										<i class="fa-brands fa-linkedin"></i>
+									</a>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-7 p-5 px-lg-6 d-flex flex-column align-self-center">
+						<div class="form-widget">
+
+							<div class="form-result"></div>
+
+							<form class="mb-0" id="template-contactform" name="template-contactform" action="https://api.web3forms.com/submit" method="POST">
+
+								<input type="hidden" name="access_key" value="9d8c2297-5d34-48b2-9a02-df19e0aeb55b">
+								<div class="form-process">
+									<div class="css3-spinner">
+										<div class="css3-spinner-scaler"></div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6 form-group mb-5">
+										<label for="name">Name: <small class="text-danger">*</small></label>
+										<input type="text" id="name" name="name" class="form-control required" placeholder="John Doe" required>
+									</div>
+
+									<div class="col-md-6 form-group mb-5">
+										<label for="phone">Phone:</label>
+										<input type="text" id="phone" name="phone" class="form-control" placeholder="+00 111 232 11 33">
+									</div>
+
+									<div class="w-100"></div>
+
+									<div class="col-12 form-group mb-5">
+										<label for="email">Email Address: <small class="text-danger">*</small></label>
+										<input type="email" id="email" name="email" class="required email form-control" placeholder="johndoe@unknown.com" required>
+									</div>
+
+									<div class="w-100"></div>
+
+									<div class="col-12 col-md-6 form-group mb-5">
+										<label class="mb-3 h6">Reason:</label><br>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" id="reason-quote" name="reason" class="custom-control-input" value="quote">
+											<label class="custom-control-label" for="reason-quote">Get a Quote</label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" id="reason-connect" name="reason" class="custom-control-input" value="connect">
+											<label class="custom-control-label" for="reason-connect">Connect</label>
+										</div>
+									</div>
+									<div class="col-12 col-md-6 form-group mb-5">
+										<label class="mb-3 h6">Industry:</label><br>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" id="industry-aviation" name="industry" class="custom-control-input" value="aviation">
+											<label class="custom-control-label" for="industry-aviation">Aviation</label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" id="industry-maritime" name="industry" class="custom-control-input" value="maritime">
+											<label class="custom-control-label" for="industry-maritime">Maritime</label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" id="industry-other" name="industry" class="custom-control-input" value="Other (Mentioned in message)">
+											<label class="custom-control-label" for="industry-other">Other (Mentioned in message)</label>
+										</div>
+									</div>
+
+									<div class="w-100"></div>
+
+									<div class="col-12 form-group mb-5">
+										<label for="message">Message: <small class="text-danger">*</small></label>
+										<textarea class="required form-control" id="message" name="message" rows="3" placeholder="Write your message here..." required></textarea>
+									</div>
+
+									<div class="col-12 form-group mb-0 text-end">
+										<button class="button button-large rounded m-0 py-3 px-5" type="submit" id="submit" name="submit" value="submit" style="background-color: #3D1144;">Send Message</button>
+									</div>
+								</div>
+
+								{# <input type="hidden" name="prefix" value=""> #}
+
+							</form>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
