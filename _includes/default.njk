@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="https://cdn.frore.co/css/theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://cdn.frore.co/images/favicon.ico" type="image/x-icon">
 
 	{# Document Title
 	============================================= #}
@@ -121,7 +121,7 @@
 			.then(async (response) => {
 				let json = await response.json();
 				loading.classList.add("d-none");
-				
+
 				if (response.status == 200) {
 					result.innerHTML = json.message;
 					result.classList.remove("text-primary");
