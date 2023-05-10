@@ -14,19 +14,19 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
 
 	{# Core Style #}
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.frore.co/css/style.css">
 
 	{# Font Icons #}
-	<link rel="stylesheet" href="css/font-icons.css">
+	<link rel="stylesheet" href="https://cdn.frore.co/css/font-icons.css">
 
 	{# Plugins/Components CSS #}
-	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="https://cdn.frore.co/css/swiper.css">
 
 	{# Custom CSS #}
-	<link rel="stylesheet" href="theme.css">
+	<link rel="stylesheet" href="https://cdn.frore.co/css/theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
 	{# Document Title
 	============================================= #}
@@ -41,6 +41,8 @@
         for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
         MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
     </script>
+
+	{{ head | safe }}
 
 </head>
 
@@ -60,8 +62,8 @@
 
 	{# JavaScripts
 	============================================= #}
-	<script src="js/jquery.js"></script>
-	<script src="js/functions.js"></script>
+	<script src="https://cdn.frore.co/js/jquery.js"></script>
+	<script src="https://cdn.frore.co/js/functions.js"></script>
 
 	{# Parallax Script
 	============================================= #}
@@ -70,7 +72,7 @@
     <script>
         // Replace YOUR_TOKEN with your Project Token
         mixpanel.init('b7d360127602679f4ccf143e7132ad58', {
-            debug: true,
+            debug: false,
             track_pageview: true
         });
 
