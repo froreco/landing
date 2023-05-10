@@ -69,6 +69,10 @@
 	============================================= #}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 	<script>var s = !SEMICOLON.Mobile.any() && skrollr.init({ forceHeight: false });</script>
+	
+	{# Add the Web3Forms script  #}
+	<script src="https://web3forms.com/client/script.js" async defer></script>
+
     <script>
         // Replace YOUR_TOKEN with your Project Token
         mixpanel.init('b7d360127602679f4ccf143e7132ad58', {
@@ -83,11 +87,66 @@
         // eg: their ID in your database or their email address.
         {# mixpanel.identify(/* "<USER_ID"> */) #}
 
-        // Track an event. It can be anything, but in this example, we're tracking a Signed Up event.
-        // Include a property about the signup, like the Signup Type
-        {# mixpanel.track('Signed Up', {
-            'Signup Type': 'Referral', 
-        }); #}
+        // Form submission
+		const form = document.getElementById("contactform");
+		const result = document.getElementById("result");
+		const loading = document.getElementById("loading");
+
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+			if (!hCaptcha) {
+				result.innerHTML = "Please fill out captcha field";
+				result.classList.remove("text-primary");
+				result.classList.add("text-danger");
+				return;
+			}
+			
+			const formData = new FormData(form);
+			const object = Object.fromEntries(formData);
+			const json = JSON.stringify(object);
+			
+			result.innerHTML = "Please wait...";
+			loading.classList.remove("d-none");
+
+			fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				},
+				body: json,
+			})
+			.then(async (response) => {
+				let json = await response.json();
+				loading.classList.add("d-none");
+				
+				if (response.status == 200) {
+					result.innerHTML = json.message;
+					result.classList.remove("text-primary");
+					result.classList.add("text-success");
+				} else {
+					console.log(response);
+					result.innerHTML = json.message;
+					result.classList.remove("text-primary");
+					result.classList.add("text-danger");
+				}
+			})
+			.catch((error) => {
+				console.log(error);
+				result.innerHTML = "Something went wrong!";
+			})
+			.then(function () {
+				form.reset();
+				mixpanel.track('Contact', {
+					'Contact Form': 'Contact Form', 
+				});
+				setTimeout(() => {
+					result.style.display = "none";
+				}, 5000);
+			});
+		});
     </script>
 
 </body>

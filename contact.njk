@@ -163,13 +163,16 @@ head: "
 					</div>
 
 					<div class="col-md-7 p-5 px-lg-6 d-flex flex-column align-self-center">
-						<div class="form-widget">
+						<div>
 
-							<div class="form-result"></div>
+							{# <div class="form-result"></div> #}
 
-							<form class="mb-0" id="template-contactform" name="template-contactform" action="https://api.web3forms.com/submit" method="POST">
+							<form class="mb-0" id="contactform" name="contactform" action="https://api.web3forms.com/submit" method="POST">
 
 								<input type="hidden" name="access_key" value="9d8c2297-5d34-48b2-9a02-df19e0aeb55b">
+								<input type="hidden" name="from_name" value="frore. Contact Form">
+								<input type="hidden" name="subject" value="New Submission from frore. Contact Form">
+
 								<div class="form-process">
 									<div class="css3-spinner">
 										<div class="css3-spinner-scaler"></div>
@@ -230,8 +233,22 @@ head: "
 										<textarea class="required form-control" id="message" name="message" rows="3" placeholder="Write your message here..." required></textarea>
 									</div>
 
+									<div class="col-12 text-center">
+										<div class="d-flex justify-content-center align-items-center d-none" id="loading">
+											<div class="spinner-grow text-primary spinner-grow-sm"
+												role="status">
+												<span class="visually-hidden">Loading...</span>
+											</div>
+											<span>loading...</span>
+										</div>
+										<p class="text-base text-center text-primary" id="result"></p>
+									</div>
+
+									<div class="h-captcha" data-captcha="true"></div>
+									<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+									
 									<div class="col-12 form-group mb-0 text-end">
-										<button class="button button-large rounded m-0 py-3 px-5" type="submit" id="submit" name="submit" value="submit" style="background-color: #3D1144;">Send Message</button>
+										<button class="button button-large rounded m-0 py-3 px-5" type="submit" id="submit" style="background-color: #3D1144;">Send Message</button>
 									</div>
 								</div>
 
